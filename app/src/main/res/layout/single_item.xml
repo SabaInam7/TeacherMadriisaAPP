@@ -13,14 +13,14 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true"
-            android:padding="12dp"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/TVsabq"
             app:layout_constraintEnd_toEndOf="@+id/TVname"
             app:layout_constraintStart_toEndOf="@+id/TVname"
