@@ -26,11 +26,7 @@ public class activity_update extends AppCompatActivity {
         ETsabq=findViewById(R.id.ETSabq2);
         ETsabqi=findViewById(R.id.ETSabqi2);
         ETrollNo=findViewById(R.id.ETRollNo2);
-
-
         getAndSetIntentData();
-//                Log.d("user", student.getRollNo());
-
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
