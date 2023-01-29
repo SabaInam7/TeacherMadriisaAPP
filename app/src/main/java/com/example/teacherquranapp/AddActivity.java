@@ -33,8 +33,6 @@ public class AddActivity extends AppCompatActivity {
                 String sabq = ETsabq.getText().toString();
                 String sabqi = ETsabqi.getText().toString();
                 String manzil = ETmanzil.getText().toString();
-
-
                 Student student = new Student(name, rollno, sabq, sabqi, manzil);
                 if(db.insertStudent(student)==false)
                 {
