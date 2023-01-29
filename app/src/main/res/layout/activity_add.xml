@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/ETName"
+        android:layout_width="224dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="409dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/insertButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ETRollNo"
+        android:layout_width="224dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="RollNo"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/ETName"
+        app:layout_constraintTop_toBottomOf="@+id/ETName" />
+
+    <EditText
+        android:id="@+id/ETSabq"
+        android:layout_width="217dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="Sabq"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/ETRollNo"
+        app:layout_constraintTop_toBottomOf="@+id/ETRollNo" />
+
+    <EditText
+        android:id="@+id/ETSabqi"
+        android:layout_width="216dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Sabqi"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/ETSabq"
+        app:layout_constraintTop_toBottomOf="@+id/ETSabq" />
+
+    <EditText
+        android:id="@+id/ETManzil"
+        android:layout_width="216dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="manzil"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/ETSabqi"
+        app:layout_constraintTop_toBottomOf="@+id/ETSabqi" />
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="37dp"
+        android:text="Insert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
