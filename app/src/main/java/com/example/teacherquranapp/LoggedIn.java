@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class LoggedIn extends AppCompatActivity {
     FloatingActionButton addButton;
     RecyclerView recyclerView;
-    ArrayList<String> name,id, rollno, sabq, sabqi, manzil;
+    ArrayList<String> name , id, rollno, sabq, sabqi, manzil;
     DBHandler db;
     MyRVAdapter RvAdapter;
     @Override
@@ -75,8 +75,6 @@ public class LoggedIn extends AppCompatActivity {
 
         }
     }
-
-
 }
 
 
