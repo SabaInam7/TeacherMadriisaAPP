@@ -3,6 +3,7 @@ package com.example.teacherquranapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button _btnLogin;
+    Button _btnLogin, gitbutton;
     EditText _etName;
     EditText _etPassword;
 
@@ -22,7 +23,16 @@ public class MainActivity extends AppCompatActivity {
         _btnLogin = findViewById(R.id.btnLogin);
         _etName=findViewById(R.id.editTextName);
         _etPassword=findViewById(R.id.editTextPassword);
-
+        gitbutton=findViewById(R.id.GithubButton);
+        gitbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url="https://github.com/SabaInam7/TeacherMadriisaAPP.git";
+                Intent intent= new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
         _btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
