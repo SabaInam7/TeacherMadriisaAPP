@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MyRVAdapter  extends RecyclerView.Adapter<MyRVAdapter.MyViewHolder> {
-
     private Context context;
-
     private ArrayList name, id, sabq, sabqi, manzil, rollNo;
     Activity activity;
 
@@ -30,8 +28,6 @@ public class MyRVAdapter  extends RecyclerView.Adapter<MyRVAdapter.MyViewHolder>
         this.sabqi = sabqi;
         this.manzil=manzil;
     }
-
-
 
     @NonNull
     @Override
