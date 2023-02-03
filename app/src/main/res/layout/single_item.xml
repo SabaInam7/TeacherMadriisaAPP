@@ -18,7 +18,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="252dp"
             android:fillViewport="true"
             android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/TVsabq"
@@ -44,46 +44,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="28dp"
                 android:text="RollNo"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintStart_toEndOf="@+id/TVst_id"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/TVsabq"
-                android:layout_width="76dp"
-                android:layout_height="45dp"
+                android:layout_width="147dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="36dp"
                 android:layout_marginTop="20dp"
                 android:text="sabq"
                 app:layout_constraintBottom_toTopOf="@+id/TVsabqi"
-                app:layout_constraintEnd_toEndOf="@+id/TVrollNo"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/TVrollNo"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.222" />
 
             <TextView
                 android:id="@+id/TVsabqi"
-                android:layout_width="88dp"
-                android:layout_height="26dp"
+                android:layout_width="146dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="44dp"
                 android:layout_marginBottom="4dp"
                 android:text="sabqi"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/TVmanzil"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toBottomOf="@+id/TVname"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.416" />
 
             <TextView
                 android:id="@+id/TVmanzil"
-                android:layout_width="82dp"
-                android:layout_height="41dp"
-                android:layout_marginEnd="28dp"
+                android:layout_width="154dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginBottom="12dp"
                 android:text="manzil"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/TVname"
                 app:layout_constraintVertical_bias="1.0" />
 
@@ -96,6 +100,52 @@
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/TVrollNo"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="58dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="37dp"
+                android:layout_marginBottom="34dp"
+                android:fontFamily="sans-serif"
+                android:text="Sabq"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/TVsabq"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TVrollNo"
+                tools:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="61dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="44dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Sabqi"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toStartOf="@+id/TVsabqi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="51dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginEnd="34dp"
+                android:layout_marginBottom="39dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Manzil"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/TVmanzil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
