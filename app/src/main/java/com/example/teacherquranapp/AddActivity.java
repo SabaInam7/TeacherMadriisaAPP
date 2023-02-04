@@ -16,7 +16,6 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-        db = new DBHandler(this);
         btnInsert=findViewById(R.id.insertButton);
         ETmanzil=findViewById(R.id.ETManzil);
         ETname=findViewById(R.id.ETName);
@@ -27,6 +26,7 @@ public class AddActivity extends AppCompatActivity {
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                db = new DBHandler(AddActivity.this);
 
                 String name = ETname.getText().toString();
                 String rollno = ETrollNo.getText().toString();
@@ -40,9 +40,8 @@ public class AddActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(AddActivity.this, "Data is Inserted Successfully", Toast.LENGTH_SHORT).show();
-
                 }
-                db.ReadAllData();
+                //db.ReadAllData();
             }
         });
 

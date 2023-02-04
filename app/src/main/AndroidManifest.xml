@@ -43,7 +43,9 @@
         <activity
             android:name=".AddActivity"
             android:label="AddStudent"
-            android:parentActivityName=".LoggedIn" >
+            android:exported="false"
+
+             >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

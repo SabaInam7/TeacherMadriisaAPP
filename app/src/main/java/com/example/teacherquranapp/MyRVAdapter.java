@@ -1,5 +1,6 @@
 package com.example.teacherquranapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -49,12 +50,12 @@ public class MyRVAdapter  extends RecyclerView.Adapter<MyRVAdapter.MyViewHolder>
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context,activity_update.class);
-                intent.putExtra("id", String.valueOf(id.get(position)));
-                intent.putExtra("rollNo", String.valueOf(rollNo.get(position)));
-                intent.putExtra("name", String.valueOf(name.get(position)));
-                intent.putExtra("sabq", String.valueOf(sabq.get(position)));
-                intent.putExtra("sabqi", String.valueOf(sabqi.get(position)));
-                intent.putExtra("manzil", String.valueOf(manzil.get(position)));
+                intent.putExtra("id", String.valueOf(id.get(holder.getAdapterPosition())));
+                intent.putExtra("rollNo", String.valueOf(rollNo.get(holder.getAdapterPosition())));
+                intent.putExtra("name", String.valueOf(name.get(holder.getAdapterPosition())));
+                intent.putExtra("sabq", String.valueOf(sabq.get(holder.getAdapterPosition())));
+                intent.putExtra("sabqi", String.valueOf(sabqi.get(holder.getAdapterPosition())));
+                intent.putExtra("manzil", String.valueOf(manzil.get(holder.getAdapterPosition())));
                 activity.startActivityForResult(intent,1);
 
             }

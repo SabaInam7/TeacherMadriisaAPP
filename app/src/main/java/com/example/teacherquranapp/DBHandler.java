@@ -71,12 +71,14 @@ public class DBHandler   extends SQLiteOpenHelper {
             return true;
     }
     public Cursor ReadAllData() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res=null;
-        if(db!=null){
-         res = db.rawQuery("select * from "+TABLE_NAME,null);
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
         }
-        return res;
+        return cursor;
     }
     public  boolean updateData(Student student) {
         SQLiteDatabase db = this.getWritableDatabase();

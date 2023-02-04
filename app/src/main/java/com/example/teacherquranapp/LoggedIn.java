@@ -28,27 +28,34 @@ public class LoggedIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
-        addButton = findViewById(R.id.floatingAddButton);
         recyclerView = findViewById(R.id.recyclerView);
-        db = new DBHandler(this);
-        name = new ArrayList<>();
-        id= new ArrayList<>();
-        rollno = new ArrayList<>();
-        sabq = new ArrayList<>();
-        sabqi = new ArrayList<>();
-        manzil = new ArrayList<>();
 
-        storeInArray();
-        RvAdapter= new MyRVAdapter(LoggedIn.this,this,name,id,rollno,sabq,sabqi,manzil);
-        recyclerView.setAdapter(RvAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(LoggedIn.this));
+        addButton = findViewById(R.id.floatingAddButton);
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoggedIn.this, AddActivity.class);
                 startActivity(intent);
+                //Toast.makeText(LoggedIn.this, "Clicked", Toast.LENGTH_SHORT).show();
+
             }
+
         });
+        db = new DBHandler(LoggedIn.this);
+        id= new ArrayList<>();
+        rollno = new ArrayList<>();
+        name = new ArrayList<>();
+        sabq = new ArrayList<>();
+        sabqi = new ArrayList<>();
+        manzil = new ArrayList<>();
+        storeInArray();
+       // Toast.makeText(LoggedIn.this, "Yes Data", Toast.LENGTH_SHORT).show();
+
+        RvAdapter= new MyRVAdapter(LoggedIn.this,this,name,id,rollno,sabq,sabqi,manzil);
+        recyclerView.setAdapter(RvAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(LoggedIn.this));
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -69,8 +76,8 @@ public class LoggedIn extends AppCompatActivity {
                 rollno.add(cursor.getString(1));
                 name.add(cursor.getString(2));
                 sabq.add(cursor.getString(3));
-                sabqi.add(cursor.getString(4));
-                manzil.add(cursor.getString(5));
+                sabqi.add(cursor.getString(5));
+                manzil.add(cursor.getString(4));
             }
 
         }
